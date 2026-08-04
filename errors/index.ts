@@ -1,2 +1,2 @@
-export { InsionClientError } from "./InsionClientError.js";
-export { InsionClientTimeoutError } from "./InsionClientTimeoutError.js";
+export { InsionError } from "./InsionError.js";
+export { InsionTimeoutError } from "./InsionTimeoutError.js";

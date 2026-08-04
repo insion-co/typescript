@@ -2,10 +2,10 @@
 
 import type * as core from "../../core/index.js";
 import * as errors from "../../errors/index.js";
-import type * as InsionClient from "../index.js";
+import type * as Insion from "../index.js";
 
-export class ForbiddenError extends errors.InsionClientError {
-    constructor(body: InsionClient.ErrorResponse, rawResponse?: core.RawResponse) {
+export class ForbiddenError extends errors.InsionError {
+    constructor(body: Insion.ErrorResponse, rawResponse?: core.RawResponse) {
         super({
             message: "ForbiddenError",
             statusCode: 403,

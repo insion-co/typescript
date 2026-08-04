@@ -2,7 +2,7 @@
 
 import * as errors from "./index.js";
 
-export class InsionClientTimeoutError extends errors.InsionClientError {
+export class InsionTimeoutError extends errors.InsionError {
     constructor(message: string, opts?: { cause?: unknown }) {
         super({
             message: message,
@@ -13,6 +13,6 @@ export class InsionClientTimeoutError extends errors.InsionClientError {
             Error.captureStackTrace(this, this.constructor);
         }
 
-        this.name = "InsionClientTimeoutError";
+        this.name = "InsionTimeoutError";
     }
 }

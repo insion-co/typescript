@@ -11,28 +11,28 @@ export function handleNonStatusCodeError(
 ): never {
     switch (error.reason) {
         case "non-json":
-            throw new errors.InsionClientError({
+            throw new errors.InsionError({
                 statusCode: error.statusCode,
                 body: error.rawBody,
                 rawResponse: rawResponse,
             });
         case "body-is-null":
-            throw new errors.InsionClientError({
+            throw new errors.InsionError({
                 statusCode: error.statusCode,
                 rawResponse: rawResponse,
             });
         case "timeout":
-            throw new errors.InsionClientTimeoutError(`Timeout exceeded when calling ${method} ${path}.`, {
+            throw new errors.InsionTimeoutError(`Timeout exceeded when calling ${method} ${path}.`, {
                 cause: error.cause,
             });
         case "unknown":
-            throw new errors.InsionClientError({
+            throw new errors.InsionError({
                 message: error.errorMessage,
                 rawResponse: rawResponse,
                 cause: error.cause,
             });
         default:
-            throw new errors.InsionClientError({
+            throw new errors.InsionError({
                 message: "Unknown error",
                 rawResponse: rawResponse,
             });

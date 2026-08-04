@@ -20,9 +20,9 @@ npm install @insion/client
 ## Usage
 
 ```ts
-import { InsionClientClient } from "@insion/client";
+import { InsionClient } from "@insion/client";
 
-const client = new InsionClientClient({
+const client = new InsionClient({
   token: process.env.INSION_API_KEY,
 });
 ```

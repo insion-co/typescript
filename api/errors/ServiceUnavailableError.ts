@@ -2,10 +2,10 @@
 
 import type * as core from "../../core/index.js";
 import * as errors from "../../errors/index.js";
-import type * as InsionClient from "../index.js";
+import type * as Insion from "../index.js";
 
-export class ServiceUnavailableError extends errors.InsionClientError {
-    constructor(body: InsionClient.ErrorResponse, rawResponse?: core.RawResponse) {
+export class ServiceUnavailableError extends errors.InsionError {
+    constructor(body: Insion.ErrorResponse, rawResponse?: core.RawResponse) {
         super({
             message: "ServiceUnavailableError",
             statusCode: 503,
