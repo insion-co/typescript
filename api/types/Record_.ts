@@ -6,7 +6,8 @@ export interface Record_ {
     id: string;
     clientId: string;
     clientUrl?: (string | null) | undefined;
-    name: string;
+    /** Name or title of the record. Null when submitted using passthrough moderation. */
+    name: string | null;
     entity: string;
     protected: boolean;
     metadata?: Insion.Metadata | undefined;
